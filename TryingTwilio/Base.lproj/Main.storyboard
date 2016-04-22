@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TryingTwilio" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jLH-pw-VVJ">
+                                <rect key="frame" x="40" y="175" width="24" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKL-Pi-AJT">
+                                <rect key="frame" x="265" y="285" width="71" height="30"/>
+                                <state key="normal" title="Send SMS"/>
+                                <connections>
+                                    <action selector="sendSMSpressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SP5-Fa-a5s"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P2Z-D3-78B">
+                                <rect key="frame" x="80" y="173" width="440" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jLH-pw-VVJ" secondAttribute="bottom" constant="399" id="CEG-7w-dGe"/>
+                            <constraint firstItem="jLH-pw-VVJ" firstAttribute="centerY" secondItem="P2Z-D3-78B" secondAttribute="centerY" id="Gl0-yW-693"/>
+                            <constraint firstAttribute="trailing" secondItem="P2Z-D3-78B" secondAttribute="trailing" constant="80" id="Mpu-N0-WQn"/>
+                            <constraint firstItem="KKL-Pi-AJT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V1x-Gt-G0b"/>
+                            <constraint firstItem="KKL-Pi-AJT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dHZ-f0-ZF3"/>
+                            <constraint firstItem="P2Z-D3-78B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fzt-rt-Ryj"/>
+                            <constraint firstItem="KKL-Pi-AJT" firstAttribute="top" secondItem="P2Z-D3-78B" secondAttribute="bottom" constant="82" id="hAA-Eh-UrO"/>
+                            <constraint firstItem="jLH-pw-VVJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="141" id="odC-at-dvt"/>
+                            <constraint firstItem="P2Z-D3-78B" firstAttribute="leading" secondItem="jLH-pw-VVJ" secondAttribute="trailing" constant="30" id="pgn-SB-r7G"/>
+                            <constraint firstItem="jLH-pw-VVJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="40" id="uch-Vp-b6J"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="odC-at-dvt"/>
+                                <exclude reference="pgn-SB-r7G"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="P2Z-D3-78B" id="KGh-mR-BGT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="288" y="321"/>
+        </scene>
+    </scenes>
+</document>
